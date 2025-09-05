@@ -1,57 +1,39 @@
-import ThemeToggle from "./ThemeToggle";
+import Logo from '../assets/G_Logo.svg';
 export default function Header() {
-  const linkTheme = "text-primary-text hover:text-accent transition-colors";
-
-  return (
-    <header className='backdrop-blur sticky top-0 z-50 border-b bg-primary/60 border-accent-soft/60'>
-      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex items-center justify-between h-16 p-10'>
-          <div className='flex items-center gap-4 p-10'>
-            <a href='/' className='flex items-center gap-3 no-underline'>
-              <div className='text-slate-900 dark:text-slate-100 p-10'>
-                <h1 className='text-lg font-semibold tracking-tight'>Lilith Luce</h1>
-              </div>
-            </a>
-          </div>
-
-          {/* Desktop nav */}
-          <nav className='flex items-center gap-6'>
-            <a
-              href='#about'
-              className='text-primary-text hover:text-accent transition-colors font-medium'>
-              About
-            </a>
-            <a
-              href='#projects'
-              className='text-primary-text hover:text-accent transition-colors font-medium'>
-              Projects
-            </a>
-            {/* <a
-              href='/contact'
-              className={`${linkTheme} font-medium`}>
-              Contact
-            </a> */}
-
-            <a
-              href='https://www.linkedin.com/in/lilith-luce/'
-              target='_blank'
-              rel='noreferrer'
-              className={`${linkTheme}`}
-              aria-label='LinkedIn'>
-              LinkedIn
-            </a>
-            <a
-              href='https://github.com/LilyVox'
-              target='_blank'
-              rel='noreferrer'
-              className={`${linkTheme}`}
-              aria-label='github'>
-              Github
-            </a>
-            <ThemeToggle />
-          </nav>
+  // first line: hamburger, icon, searchbar, cart
+  // at md break the hamburger spreads into the second line
+  const TopBar = () => {
+    // list icon will need to change to x button when clicked. probably state
+    // TODO: lefthand modal, all same color
+    return (
+      <div className='flex flex-row items-center bg-primary text-primary-text'>
+        <i className='pl-2 text-xl bi bi-list' />
+        <img className='h-[2em] pl-4 pt-1' src={Logo} />
+        <h1 className='text-lg font-semibold tracking-tight pl-0 p-2'>reatTorque</h1>
+        <div className='flex flex-row justify-evenly w-full items-center'>
+          <SearchBar />
+          <i className="p-4 bi bi-person"></i>
+          <i className='p-4 bi bi-cart'></i>
         </div>
       </div>
+    );
+  };
+  const SearchBar = () => {
+    return (
+      <div className='p-2 w-full flex flex-row'>
+        <input
+          id='searchbar'
+          className='bg-primary-soft border border-primary-text rounded-xs w-full flex flex-row justify-between'
+          placeholder=' Search...'
+          type='text'
+        />
+        <i className='text-accent bi bi-search pl-0 p-2 search_icon rounded-xs' />
+      </div>
+    );
+  };
+  return (
+    <header className='top-0 z-50 border-b border-accent-soft/60'>
+      <TopBar />
     </header>
   );
 }

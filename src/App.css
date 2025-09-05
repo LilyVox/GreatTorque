@@ -1,37 +1,37 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
-    --color-primary: #A1D8FC;
-    --color-primary-soft: #D7EEFE;
-    --color-primary-text: #010C14;
+    --color-primary: #F2F2F2;
+    --color-primary-soft: #ECECEC;
+    --color-primary-text: #262626;
 
-    --color-secondary: #4361EE;
-    --color-secondary-soft: #6A83F1;
+    --color-secondary: #BF212E;
+    --color-secondary-soft: #F2E41B;
 
-    --color-accent: #71F79F;
+    --color-accent: #07732D;
     --color-accent-soft: #9FF9BE;
 }
 @layer theme {
   .dark {
-    --color-primary: #171923;
-    --color-primary-soft: #404663;
-    --color-primary-text: #E6E8EF;
+    --color-primary: #F2F2F2;
+    --color-primary-soft: #ECECEC;
+    --color-primary-text: #262626;
 
-    --color-secondary: #55286F;
-    --color-secondary-soft: #944BBE;
+    --color-secondary: #BF212E;
+    --color-secondary-soft: #F2E41B;
 
-    --color-accent: #BC96E6;
-    --color-accent-soft: #D5BDEF;
+    --color-accent: #07732D;
+    --color-accent-soft: #9FF9BE;
   }
   .light {
-    --color-primary: #A1D8FC;
-    --color-primary-soft: #D7EEFE;
-    --color-primary-text: #010C14;
+    --color-primary: #F2F2F2;
+    --color-primary-soft: #ECECEC;
+    --color-primary-text: #262626;
 
-    --color-secondary: #6A83F1;
-    --color-secondary-soft: #4361EE;
+    --color-secondary: #BF212E;
+    --color-secondary-soft: #F2E41B;
 
-    --color-accent: #71F79F;
+    --color-accent: #07732D;
     --color-accent-soft: #9FF9BE;
   }
 }
@@ -41,4 +41,9 @@
 }
 .theme_filter {
   filter: invert(36%) sepia(40%) saturate(2362%) hue-rotate(210deg) brightness(93%) contrast(102%);
+}
+
+.search_icon{
+  pointer-events: none;
+  transform: translate(-100%,0);
 }

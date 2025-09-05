@@ -4,7 +4,7 @@ A potential shopfront for an auto-parts store.
 
 # Plan of action
 
-## Homepage
+## Header/Footer
 
 ![header](/plan_screenshots/header.png)
 ![sidebar](/plan_screenshots/hp_sidebar.png)
@@ -13,6 +13,17 @@ breaks at md
 
 ![footer](/plan_screenshots/footer.png)
 ![footer_full](/plan_screenshots/footer_full.png)
+
+## Homepage
+
+except the first carosel, each turns into a grid at lg breakpoint
+
+carosel and categories
+![carosel and categories](/plan_screenshots/carosel_and_categories.png)
+service carosel and promos
+![service-carosel and promos](/plan_screenshots/service-carosel_and_promos.png)
+ad and product carosel
+![ad and featured product carosel](/plan_screenshots/ad_feat-product-carosel.png)
 
 ## Category Refinement pages
 
